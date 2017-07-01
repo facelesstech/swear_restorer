@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/bin/python /home/pi/swear_restorer/swear_detect.py 1000hz.pmdl
+WorkingDirectory=/home/pi/swear_restorer/
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=swear_restorer
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
